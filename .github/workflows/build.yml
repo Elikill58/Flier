@@ -7,8 +7,8 @@ jobs:
     steps:
       - name: Checkout git repo
         uses: actions/checkout@v2
-      - name: Install Z-zip
-        run: sudo apt-get install p7zip-full
+      - name: Install required applications
+        run: sudo apt-get install pandoc
       - name: Build
         run: ./make.sh
       - uses: actions/upload-artifact@v2
